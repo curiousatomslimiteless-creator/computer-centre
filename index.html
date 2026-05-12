@@ -1,0 +1,482 @@
+Here is an HTML document that creates a professional village computer centre website, listing all the services and business partners you specified.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Kortlagudem Computer Centre | Free Learning & Editing Hub</title>
+  <!-- Google Fonts & simple reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #f5f7fc 0%, #eef2f5 100%);
+      color: #1a2c3e;
+      line-height: 1.4;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+    }
+
+    /* header / hero */
+    .hero {
+      background: linear-gradient(135deg, #0b2b3b, #124e5f);
+      border-radius: 2rem;
+      padding: 2rem 2rem 2rem 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+      color: white;
+      transition: all 0.2s;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .hero h1 span {
+      background: #ffcd3c;
+      color: #1e3b44;
+      font-size: 1.6rem;
+      padding: 0.2rem 1rem;
+      border-radius: 60px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 80%;
+      opacity: 0.9;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .free-badge {
+      display: inline-block;
+      background: #e25822;
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 0.8rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* card grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.6rem 1.6rem 1.8rem;
+      transition: transform 0.2s ease, box-shadow 0.2s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-icon {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #124e5f;
+    }
+
+    .service-card p {
+      color: #2c4b5c;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .highlight-list {
+      list-style: none;
+      margin-top: 0.8rem;
+    }
+
+    .highlight-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      background: #f8fafc;
+      padding: 0.3rem 0.8rem;
+      border-radius: 28px;
+      width: fit-content;
+    }
+
+    .badge {
+      background: #0b2b3b10;
+      border-radius: 40px;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #0b5a6b;
+    }
+
+    /* partners section */
+    .partners-section {
+      background: #ffffffd9;
+      backdrop-filter: blur(2px);
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e9edf2;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-title:before {
+      content: "⚙️";
+      font-size: 2rem;
+    }
+
+    .partner-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin: 1.2rem 0 1rem;
+    }
+
+    .partner-tag {
+      background: #eef2ff;
+      padding: 0.6rem 1.3rem;
+      border-radius: 48px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #124e5f;
+      border-left: 3px solid #ffcd3c;
+      transition: 0.1s linear;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .partner-tag:hover {
+      background: #ffe6b3;
+      transform: scale(1.02);
+    }
+
+    .business-note {
+      background: #fef7e0;
+      border-radius: 28px;
+      padding: 1rem 1.5rem;
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    /* call to action / free access banner */
+    .free-access {
+      background: linear-gradient(115deg, #cbe5e9 0%, #e0f0f0 100%);
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      border: 1px solid #bdd9df;
+    }
+
+    .free-access h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0b3b44;
+      margin-bottom: 0.5rem;
+    }
+
+    .free-access p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #124e5f;
+      color: white;
+      padding: 0.8rem 2rem;
+      margin-top: 1.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #0a3b48;
+      transform: scale(1.02);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    }
+
+    /* website creation / web set section */
+    .webset-section {
+      background: #1f2f38;
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+      margin: 2rem 0 1.5rem;
+      color: white;
+    }
+
+    .webset-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .webset-text {
+      flex: 2;
+    }
+
+    .webset-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .webset-badge {
+      background: #ffcd3c;
+      color: #1f2f38;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .editing-business {
+      font-size: 1rem;
+      background: #0e2a32;
+      padding: 1rem 1.4rem;
+      border-radius: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid #cbdbdf;
+      color: #3d6a7c;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        padding: 1rem;
+      }
+      .hero p {
+        max-width: 100%;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .section-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  
+  <!-- Hero / Village Computer Centre Intro -->
+  <div class="hero">
+    <h1>🖥️ Kortlagudem <span>Computer Centre</span></h1>
+    <p>📍 Village: Kortlagudem | Free & Open Computer Access for Everyone</p>
+    <div class="free-badge">✨ 100% FREE Learning & Workstation ✨</div>
+    <p><strong>"Come & use computers – learn, create, edit & build your future"</strong> — no charges, just passion.</p>
+  </div>
+
+  <!-- MAIN SERVICES: Learplays, CuriousAtoms, Game Create & Editing + WebSet -->
+  <div class="services-grid">
+    <!-- Learplays & curiosity area -->
+    <div class="service-card">
+      <div class="card-icon">🎮📚</div>
+      <h3>LeaRplays & CuriousAtoms</h3>
+      <p><strong>Interactive learning + gamified science</strong> — explore atoms, physics, and logic through engaging play-based modules. Build curiosity while having fun!</p>
+      <ul class="highlight-list">
+        <li>🧪 CuriousAtoms Lab: VR-like experiments</li>
+        <li>🎲 LeaRplays: educational quizzes & strategy games</li>
+        <li>📖 Free workshops every weekend</li>
+      </ul>
+    </div>
+
+    <!-- Game Creation & Editing Hub -->
+    <div class="service-card">
+      <div class="card-icon">🕹️✂️</div>
+      <h3>Game Create & Editing</h3>
+      <p>Design your own 2D/3D games, modify assets, and learn game development. From concept to prototype — we support Blender, Unity basics, and pixel art.</p>
+      <ul class="highlight-list">
+        <li>🎨 Level design & character editing</li>
+        <li>⚙️ Game logic & scripting intro</li>
+        <li>🖌️ Asset creation & sprite editing</li>
+      </ul>
+    </div>
+
+    <!-- Website Create (Webset) + editing business -->
+    <div class="service-card">
+      <div class="card-icon">🌐💻</div>
+      <h3>Webset · Website Creation</h3>
+      <p>Full website building from scratch using HTML, CSS, JavaScript & modern tools. Learn to launch your own site, portfolio, or e‑commerce store.</p>
+      <div class="badge" style="margin-top: 6px; display: inline-block;">🔥 Business Partner Support</div>
+      <ul class="highlight-list">
+        <li>📁 Custom website design & hosting</li>
+        <li>⚡ Responsive layouts & CMS basics</li>
+        <li>🤝 Editing business integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Webset + Editing Business Partners Section: akshay,surendar,jashu,pandu,venky,varun,sanju,sandeep -->
+  <div class="webset-section">
+    <div class="webset-grid">
+      <div class="webset-text">
+        <h3>✍️ Webset & Editing Business</h3>
+        <p>Specialized edit suite & web solutions — from graphic design, video editing, website creation to digital branding. Our centre runs a collaborative editing business wing powered by dedicated partners.</p>
+        <div class="webset-badge">📢 Business Partners Network: Editing + Web Services</div>
+        <div class="editing-business">
+          💼 <strong>Editing Business Partners (Active)</strong><br>
+          Meet the core team that drives editing projects, client websites, and creative media solutions right from Kortlagudem Computer Centre.
+        </div>
+      </div>
+      <div class="partner-list" style="margin-top: 0.5rem; justify-content: flex-start; background: transparent; padding: 0;">
+        <!-- list of partners exactly: akshay, surendar, jashu, pandu, venky, varun, sanju, sandeep -->
+      </div>
+    </div>
+    <!-- Partner tags displayed in row -->
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem;">
+      <span class="partner-tag">👤 akshay</span>
+      <span class="partner-tag">👤 surendar</span>
+      <span class="partner-tag">👤 jashu</span>
+      <span class="partner-tag">👤 pandu</span>
+      <span class="partner-tag">👤 venky</span>
+      <span class="partner-tag">👤 varun</span>
+      <span class="partner-tag">👤 sanju</span>
+      <span class="partner-tag">👤 sandeep</span>
+    </div>
+    <div style="margin-top: 1.2rem; font-size: 0.9rem; background: #00000030; padding: 0.5rem 1rem; border-radius: 50px; display: inline-block;">
+      🤝 These business partners collaborate on Webset projects, editing, and creative commissions — walk in & connect!
+    </div>
+  </div>
+
+  <!-- Business Partners detailed area + editing business context -->
+  <div class="partners-section">
+    <div class="section-title">🚀 Editing & Webset Business Partners</div>
+    <p><strong>Meet our professional team –</strong> Each partner brings expertise in editing, web design, media production, and client projects. Together we transform ideas into reality.</p>
+    <div class="partner-list" style="margin-top: 1.2rem;">
+      <span class="partner-tag">🎨 akshay (Lead Editor)</span>
+      <span class="partner-tag">🌐 surendar (Web Dev)</span>
+      <span class="partner-tag">🎬 jashu (Video Editing)</span>
+      <span class="partner-tag">📸 pandu (Graphic Design)</span>
+      <span class="partner-tag">⚙️ venky (Game Asset Edit)</span>
+      <span class="partner-tag">🖌️ varun (UI/UX & webset)</span>
+      <span class="partner-tag">📈 sanju (Digital Marketing)</span>
+      <span class="partner-tag">💡 sandeep (Creative Head)</span>
+    </div>
+    <div class="business-note">
+      💼 <strong>Editing business services:</strong> Photo retouching, logo creation, video post-production, website design & maintenance. All partners are available at Kortlagudem Computer Centre for affordable/free workshops. 
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">🔹 <strong>How to avail?</strong> Visit centre, mention partner name, and work on real projects — no hidden fees for learning. Business collaborations welcome!</p>
+  </div>
+
+  <!-- FREE Access & workstation - this computer free, entst mean come and work -->
+  <div class="free-access">
+    <h2>💫 totally free computer access 💫</h2>
+    <p><strong>"you have entst mean come and this computer worke"</strong> — walk in, sit, learn, play, edit and create. No membership, no charges. Free for all villagers, students, and creators.</p>
+    <a href="#" class="btn" id="freeVisitBtn">📢 Visit Centre — Free Workstation</a>
+    <p style="font-size: 0.8rem; margin-top: 0.8rem;">🕒 Open Mon-Sat | 9 AM – 7 PM | Kortlagudem Main Road, near Gram Panchayat</p>
+  </div>
+
+  <!-- Extra section: Services included learpalys, curiousatoms, game create and editing, webset clearly repeated -->
+  <div style="background: #ffffffcc; border-radius: 1.5rem; padding: 1.5rem; margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;">
+    <div style="flex:1; min-width: 150px;">
+      <strong>🎓 Learn + Play</strong><br>
+      LeaRplays | CuriousAtoms | STEM games
+    </div>
+    <div style="flex:1; min-width: 150px;">
+      <strong>🎮 Game Zone</strong><br>
+      Game Create, editing, level build.
+    </div>
+    <div style="flex:1; min-width: 150px;">
+      <strong>🌍 Webset Hub</strong><br>
+      website creation & hosting.
+    </div>
+    <div style="flex:1; min-width: 150px;">
+      <strong>✂️ Editing Business</strong><br>
+      Partners: akshay, surendar, jashu, pandu, venky, varun, sanju, sandeep
+    </div>
+  </div>
+
+  <footer>
+    <p>📍 Kortlagudem Computer Centre | A community-driven digital space — free computers, creative tools, and support from local editing partners.<br>
+    🧡 "entst mean come and use computer for work, learning, games, webset, editing everything" — 100% accessible for all.</p>
+    <p style="margin-top: 0.5rem;">© 2025 Kortlagudem Tech Hub | Designed with 🌾 for rural empowerment</p>
+  </footer>
+</div>
+
+<!-- simple interactive alert for demonstration, not essential but adds life -->
+<script>
+  (function() {
+    const visitBtn = document.getElementById('freeVisitBtn');
+    if(visitBtn) {
+      visitBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert("🎉 Welcome to Kortlagudem Computer Centre!\n\n✅ Free computers available.\n✅ Learn LeaRplays / CuriousAtoms.\n✅ Game creation & editing support.\n✅ Webset & website design by partners: akshay, surendar, jashu, pandu, venky, varun, sanju, sandeep.\n\nVisit anytime – no fees, just creativity!");
+      });
+    }
+    // additional hover effect for partner boxes
+    const partnerTags = document.querySelectorAll('.partner-tag');
+    partnerTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        const partnerName = tag.innerText.replace(/[👤🎨🌐🎬📸⚙️🖌️📈💡]/g, '').trim();
+        alert(`🤝 ${partnerName} from Kortlagudem Editing Business is ready to assist you with webset & creative projects. Drop by the centre!`);
+      });
+    });
+    // Informational banner about free work
+    console.log("Kortlagudem Computer Centre: free computer work | LeaRplays | CuriousAtoms | Game Create & Editing | Webset partners");
+  })();
+</script>
+</body>
+</html>
+```
