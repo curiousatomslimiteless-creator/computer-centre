@@ -1,11 +1,9 @@
-Here is an HTML document that creates a professional village computer centre website, listing all the services and business partners you specified.
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Kortlagudem Computer Centre | Free Learning & Editing Hub</title>
+  <title>Kortlagudem Computer Centre | Free Learning & Editing Hub | LearnPlay.in</title>
   <!-- Google Fonts & simple reset -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
@@ -189,6 +187,7 @@ Here is an HTML document that creates a professional village computer centre web
       border-left: 3px solid #ffcd3c;
       transition: 0.1s linear;
       box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      cursor: pointer;
     }
 
     .partner-tag:hover {
@@ -292,6 +291,17 @@ Here is an HTML document that creates a professional village computer centre web
       margin-top: 1rem;
     }
 
+    .learnplay-link {
+      color: #ffcd3c;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 1px dotted #ffcd3c;
+    }
+    .learnplay-link:hover {
+      color: white;
+      border-bottom-color: white;
+    }
+
     footer {
       margin-top: 3rem;
       text-align: center;
@@ -330,14 +340,14 @@ Here is an HTML document that creates a professional village computer centre web
 
   <!-- MAIN SERVICES: Learplays, CuriousAtoms, Game Create & Editing + WebSet -->
   <div class="services-grid">
-    <!-- Learplays & curiosity area -->
+    <!-- Learplays & curiosity area with link to LearnPlay.in -->
     <div class="service-card">
       <div class="card-icon">🎮📚</div>
-      <h3>LeaRplays & CuriousAtoms</h3>
-      <p><strong>Interactive learning + gamified science</strong> — explore atoms, physics, and logic through engaging play-based modules. Build curiosity while having fun!</p>
+      <h3><a href="https://learnplay.in" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #124e5f; border-bottom: 2px solid #ffcd3c;">LeaRplays</a> & CuriousAtoms</h3>
+      <p><strong>Interactive learning + gamified science</strong> — explore atoms, physics, and logic through engaging play-based modules. Build curiosity while having fun! <strong><a href="https://learnplay.in" target="_blank" rel="noopener noreferrer" style="color:#e25822;">Play 500+ free games on LearnPlay.in →</a></strong></p>
       <ul class="highlight-list">
         <li>🧪 CuriousAtoms Lab: VR-like experiments</li>
-        <li>🎲 LeaRplays: educational quizzes & strategy games</li>
+        <li>🎲 <a href="https://learnplay.in" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color:#124e5f; font-weight: bold;">LeaRplays</a>: educational quizzes & strategy games</li>
         <li>📖 Free workshops every weekend</li>
       </ul>
     </div>
@@ -380,9 +390,6 @@ Here is an HTML document that creates a professional village computer centre web
           Meet the core team that drives editing projects, client websites, and creative media solutions right from Kortlagudem Computer Centre.
         </div>
       </div>
-      <div class="partner-list" style="margin-top: 0.5rem; justify-content: flex-start; background: transparent; padding: 0;">
-        <!-- list of partners exactly: akshay, surendar, jashu, pandu, venky, varun, sanju, sandeep -->
-      </div>
     </div>
     <!-- Partner tags displayed in row -->
     <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem;">
@@ -424,6 +431,7 @@ Here is an HTML document that creates a professional village computer centre web
   <div class="free-access">
     <h2>💫 totally free computer access 💫</h2>
     <p><strong>"you have entst mean come and this computer worke"</strong> — walk in, sit, learn, play, edit and create. No membership, no charges. Free for all villagers, students, and creators.</p>
+    <p style="margin-top: 0.5rem;">✨ <strong>Start learning games now:</strong> <a href="https://learnplay.in" target="_blank" rel="noopener noreferrer" style="color: #0b3b44; font-weight: bold; background: #ffcd3c; padding: 0.2rem 0.6rem; border-radius: 20px; text-decoration: none;">Explore LearnPlay.in →</a> (500+ free educational games)</p>
     <a href="#" class="btn" id="freeVisitBtn">📢 Visit Centre — Free Workstation</a>
     <p style="font-size: 0.8rem; margin-top: 0.8rem;">🕒 Open Mon-Sat | 9 AM – 7 PM | Kortlagudem Main Road, near Gram Panchayat</p>
   </div>
@@ -432,7 +440,7 @@ Here is an HTML document that creates a professional village computer centre web
   <div style="background: #ffffffcc; border-radius: 1.5rem; padding: 1.5rem; margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;">
     <div style="flex:1; min-width: 150px;">
       <strong>🎓 Learn + Play</strong><br>
-      LeaRplays | CuriousAtoms | STEM games
+      <a href="https://learnplay.in" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color:#124e5f; font-weight: bold;">LeaRplays</a> | CuriousAtoms | STEM games
     </div>
     <div style="flex:1; min-width: 150px;">
       <strong>🎮 Game Zone</strong><br>
@@ -450,7 +458,8 @@ Here is an HTML document that creates a professional village computer centre web
 
   <footer>
     <p>📍 Kortlagudem Computer Centre | A community-driven digital space — free computers, creative tools, and support from local editing partners.<br>
-    🧡 "entst mean come and use computer for work, learning, games, webset, editing everything" — 100% accessible for all.</p>
+    🧡 "entst mean come and use computer for work, learning, games, webset, editing everything" — 100% accessible for all.<br>
+    🎮 <strong>Play & learn on <a href="https://learnplay.in" target="_blank" rel="noopener noreferrer" style="color:#124e5f; font-weight: bold;">LearnPlay.in</a></strong> — the platform where students play to learn and create games to teach others.</p>
     <p style="margin-top: 0.5rem;">© 2025 Kortlagudem Tech Hub | Designed with 🌾 for rural empowerment</p>
   </footer>
 </div>
@@ -462,10 +471,10 @@ Here is an HTML document that creates a professional village computer centre web
     if(visitBtn) {
       visitBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        alert("🎉 Welcome to Kortlagudem Computer Centre!\n\n✅ Free computers available.\n✅ Learn LeaRplays / CuriousAtoms.\n✅ Game creation & editing support.\n✅ Webset & website design by partners: akshay, surendar, jashu, pandu, venky, varun, sanju, sandeep.\n\nVisit anytime – no fees, just creativity!");
+        alert("🎉 Welcome to Kortlagudem Computer Centre!\n\n✅ Free computers available.\n✅ Learn LeaRplays / CuriousAtoms via LearnPlay.in\n✅ Game creation & editing support.\n✅ Webset & website design by partners: akshay, surendar, jashu, pandu, venky, varun, sanju, sandeep.\n\nVisit anytime – no fees, just creativity!");
       });
     }
-    // additional hover effect for partner boxes
+    // additional click effect for partner tags
     const partnerTags = document.querySelectorAll('.partner-tag');
     partnerTags.forEach(tag => {
       tag.addEventListener('click', () => {
@@ -473,10 +482,8 @@ Here is an HTML document that creates a professional village computer centre web
         alert(`🤝 ${partnerName} from Kortlagudem Editing Business is ready to assist you with webset & creative projects. Drop by the centre!`);
       });
     });
-    // Informational banner about free work
-    console.log("Kortlagudem Computer Centre: free computer work | LeaRplays | CuriousAtoms | Game Create & Editing | Webset partners");
+    console.log("Kortlagudem Computer Centre: free computer work | LeaRplays -> LearnPlay.in | CuriousAtoms | Game Create & Editing | Webset partners");
   })();
 </script>
 </body>
 </html>
-```
